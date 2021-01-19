@@ -1,88 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Digitale Trusler</title>
-  <link rel="stylesheet" type="text/CSS" href="CSS/minstil.css">
-</head>
-<body>
-    <h1>
-        Digitale Trusler
-    </h1>
-    <div class="nested">
-        <div>
-            <div>Datainnbrudd</div>
-            <div>Hva er det?</div>
-            <div>-Hacking</div>
-            <div>-Datainnbrudd</div>
-            <br>
-                <div>Forholdsregler</div>
-            <div>-Oppdatert programvare regelmessig</div>
-            <div>-Ikke gi administrasjonsrettigheter hvis det ikke er nødvendig</div>
-            <div>-Blokker apper og programmer på nettet</div>
-            <div>-Bedrift nett (brukernavn og passord)</div>
-            <div>-Konkrete forbud for å ta fremmede enheter på nettet</div>
-            <div>-Whitelisting?</div>
-            <div>-Internett filter</div>
-        </div>
-        <div>
-            <div> Verdikjede Angrep</div>
-            <div> Hva er det?</div>
-            <div>-Sårbare enheter</div>
-            <div>-Sårbart programvare</div>
-            <br>
-            <div> Forholdsregler</div>
-            <div>-Gode sikkerhetsrutiner</div>
-        </div>
-        <div>
-            <div>Utstyrs svakheter</div>
-            <div>Hva er det?</div>
-            <div>-Utstyr som er for lett tilgjengelig</div>
-            <div>-Enhetene er koblet opp mot bedrift nettet</div>
-            <div>-Bruke som inngangspunkt for å hacke systemer</div>
-            <br>
-            <div>Forholdsregler</div>
-            <div>-Utstyr må ha innlogging</div>
-            <div>-Utstyr skal låses inn</div>
-            <div>-Alt utstyr som skal knyttes opp må være godkjent av IT</div>        
-        </div>
-        <div>
-            <div>Svindel og blackmail</div>
-            <div>Hva er det?</div>
-            <div>-Folk blir lurt</div>
-            <div>-Falskt utpressing materiale</div>
-            <div>-Gjøre skade på deg personlig eller selskap</div>
-            <br>
-            <div>Forholdsregler</div>
-            <div>-Datakurs</div>
-            <div>-Nettvett kursing</div>
-            <div>-Personvern kurs</div>
-            <div>-Ikke tro på folk med ødelagt engelsk</div>
-            
-        </div>
-        <div>
-            <div>Utpressing</div>
-            <div>Hva er det?</div>
-            <div>-Bruke ulovlige virkemiddel for å få noe</div>
-            <br>
-            <div>-Forholdsregel</div>
-            <div>-Prøve å ha mest mulig privatliv så det er vanskelig for noen å finne utpressingsmiddel</div>
-            <div>-Være forsiktig med hva informasjon man gir folk</div>
-            <div>-Begrenset tilgang til selskapet</div>
-        </div>
-        <div>
-            <div>Løsepengevirus</div>
-            <div>Hva er det?</div>
-            <div>-Virus som gjør ofte stor skade hvis du ikke betaler en sum</div>
-            <div>-Ofte bitcoin betaling</div>
-            <div>-Utpressing</div>
-            <br>
-            <div>Forholdsregler</div>
-            <div>-Ikke legg inn ting i datamaskinen hvis du ikke vet hva det er</div>
-            <div>-Ikke last ned tilfeldige filer fra internett</div>
-            <div>-Nettvett (type ikke tro på alt osv)</div>
-            </div>
-        </div>
-    </div>
-
-</body>
-</html>
+# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
+version: 2.1
+# Use a package of configuration called an orb.
+orbs:
+  # Declare a dependency on the welcome-orb
+  welcome: circleci/welcome-orb@0.4.1
+# Orchestrate or schedule a set of jobs
+workflows:
+  # Name the workflow "welcome"
+  welcome:
+    # Run the welcome/run job in its own container
+    jobs:
+      - welcome/run
